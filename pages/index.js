@@ -34,29 +34,6 @@ function submitImage() {
 }
 
 let leadershipBoard = document.querySelector(".leadership-board");
-let pfp = [
-  "👴",
-  "🧓",
-  "👵",
-  "👧",
-  "🧒",
-  "🧑",
-  "👳",
-  "🤴",
-  "👼",
-  "👩‍🦳",
-  "👨",
-  "👰",
-  "👨‍🦰",
-  "👩‍🦰",
-  "👩‍🦲",
-  "👱‍",
-];
-
-// Raffle
-function shuffleArray(inputArray) {
-  inputArray.sort(() => Math.random() - 0.5);
-}
 
 const displayMatchingGameLeaderBoard = function (list, sort = false) {
   jQuery.extend({
