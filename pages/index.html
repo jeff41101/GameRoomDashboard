@@ -30,7 +30,23 @@
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <link
+      rel="stylesheet"
+      href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css"
+  />
+  <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+  <link rel="stylesheet" href="css/jquery.fileupload.css" />
+  <link rel="stylesheet" href="css/jquery.fileupload-ui.css" />
+  <!-- CSS adjustments for browsers with JavaScript disabled -->
+  <noscript
+    ><link rel="stylesheet" href="css/jquery.fileupload-noscript.css"
+  /></noscript>
+  <noscript
+    ><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"
+  /></noscript>
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- Material Icons -->
@@ -110,6 +126,7 @@
             <span class="nav-link-text ms-1">Profile</span>
           </a>
         </li>
+        
         <li class="nav-item">
           <a class="nav-link text-white " href="../pages/sign-in.html">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -189,9 +206,18 @@
       <div class="card mb-4">      
         <div class="row removable">
           <div class="col-6 d-flex px-5 py-3"><input class="form-control" id="imgName" placeholder="Please input the image name"></div>
-          <div class="col-6 d-flex px-4 py-3"><input class="form-control" id="imgNumber" placeholder="Please input the image number"></div>
           <div class="col-6 d-flex px-5 py-3"><input class="form-control" id="imgLink" placeholder="Please input the image description link"></div>
-          <div class="col-6 d-flex px-4 py-3"><input class="form-control" id="imgBase64" placeholder="Please input the image base64"></div>
+          <div class="col-12 d-flex px-4 py-3 d-none"><input class="form-control" id="imgBase64" placeholder="Please input the image base64"></div><section></section>
+          <div class="col-12 d-flex px-5 py-3 img-drag" style="width: 99%;
+          margin-left: 10px;">
+            <div class="drag-area">
+              <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+              <div class="drag-area-header">Drag & Drop to Upload File</div>
+              <span>OR</span>
+              <button>Browse File</button>
+              <input type="file" id="_fileinput" hidden>
+            </div>
+          </div>
       </div>
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
@@ -207,7 +233,6 @@
                           <tr>
                               <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
                               <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Description Link</th>
-                              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Number</th>
                               <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Image</th>
                               <th class="text-secondary opacity-7"></th>
                           </tr>
@@ -584,7 +609,42 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+  <script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
   <script type="text/javascript" src="index.js"></script>
+  <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+    <script src="js/vendor/jquery.ui.widget.js"></script>
+    <!-- The Templates plugin is included to render the upload/download listings -->
+    <script src="https://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
+    <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+    <script src="https://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+    <!-- The Canvas to Blob plugin is included for image resizing functionality -->
+    <script src="https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+    <!-- blueimp Gallery script -->
+    <script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script src="js/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="js/jquery.fileupload.js"></script>
+    <!-- The File Upload processing plugin -->
+    <script src="js/jquery.fileupload-process.js"></script>
+    <!-- The File Upload image preview & resize plugin -->
+    <script src="js/jquery.fileupload-image.js"></script>
+    <!-- The File Upload audio preview plugin -->
+    <script src="js/jquery.fileupload-audio.js"></script>
+    <!-- The File Upload video preview plugin -->
+    <script src="js/jquery.fileupload-video.js"></script>
+    <!-- The File Upload validation plugin -->
+    <script src="js/jquery.fileupload-validate.js"></script>
+    <!-- The File Upload user interface plugin -->
+    <script src="js/jquery.fileupload-ui.js"></script>
+    <!-- The main application script -->
+    <script src="js/demo.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
